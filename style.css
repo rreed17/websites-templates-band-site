@@ -105,7 +105,7 @@ ul{
     content:'';
     height: 100vh;
     width: 100%;
-    background-image: url(img/showcase.jpeg);
+    background-image: url(img/showcase.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -127,7 +127,8 @@ ul{
 .content{
     position: absolute;
     z-index: 1;
-    top: 10%;
+    
+    top: 20%;
     left: 50%;
     margin-top: 105px;
     margin-left: -145px;
@@ -141,10 +142,12 @@ ul{
     width: 180px;
 }
 .content .title{
-    font-size: 2.2rem;
+    color: #333;
+    font-size: 4rem;
     margin-top: 1rem;
 }
 .content .text{
+    color:#333;
     line-height: 1.7;
     margin-top: 1rem;
 }
