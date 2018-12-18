@@ -27,7 +27,7 @@ ul{
     font-size: 2.5em;
     position:relative;
     padding:5px;
-    color: #fff;
+    color: #ccc;
   }
   ul li a:hover{
       color:#ff0;
@@ -186,9 +186,7 @@ main{
     padding: 4rem;
 }
 /*======================= About Styles ================================================*/
-#about{
-    
-}
+
 .about-band{
     display: grid;
     grid-gap: 30px;
@@ -229,7 +227,15 @@ img.band-full{
     padding: 0.5rem 1rem;
     border-bottom: #ccc 5px solid;
 }
+
+.music-band{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-top:70px;
+}
 footer{
+    
     padding: 2.1rem;
 }
 footer p{
