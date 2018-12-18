@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+
 body{
     background: rgba(0,0,0,0.9);
     margin: 0;
     color: #fff;
-    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Concert One', cursive;
     
 }
+/*====================== NAVIGATION STYLE ====================================*/
 nav{
     position: absolute;
     z-index: 1;
@@ -21,9 +24,10 @@ ul{
   ul li a{
     text-decoration:none;
     text-transform:uppercase;
-    font-size: 1.2em;
+    font-size: 2.5em;
     position:relative;
     padding:5px;
+    color: #fff;
   }
   ul li a:hover{
       color:#ff0;
@@ -105,7 +109,7 @@ ul{
     content:'';
     height: 100vh;
     width: 100%;
-    background-image: url(img/showcase.png);
+    background-image: url(img/showcase2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -126,8 +130,7 @@ ul{
 }
 .content{
     position: absolute;
-    z-index: 1;
-    
+    z-index: 1;    
     top: 20%;
     left: 50%;
     margin-top: 105px;
@@ -142,12 +145,12 @@ ul{
     width: 180px;
 }
 .content .title{
-    color: #333;
+    color: #fff;
     font-size: 4rem;
     margin-top: 1rem;
 }
 .content .text{
-    color:#333;
+    color:#fff;
     line-height: 1.7;
     margin-top: 1rem;
 }
@@ -179,13 +182,72 @@ ul{
     background:#333;
     color: #f4f4f4;
 }
+main{
+    padding: 4rem;
+}
+/*======================= About Styles ================================================*/
+#about{
+    
+}
+.about-band{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas:
+    'bandfull bandname bandname'
+    'bandmate1 bandmate2 bandmate3'
+    'bandmate1 bandmate2 bandmate3';
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top:70px;
+}
+.band-full{
+    grid-area: bandfull;
+    
+    margin: auto;
+    border-radius: 50%;
+    border: #333 4px solid;
+}
+img.band-full{
+    width: 100%;
+}
+.band-short{
+    grid-area: bandname;
+}
+.band-short h1{
+    display: inline-block;
+}
+.band-mate-1{
+    grid-area: bandmate1;
+}
+.band-mate-2{
+    grid-area: bandmate2;
+}
+.band-mate-3{
+    grid-area: bandmate3;
+}
+.mate{
+    background:rgba(0,0,0,0.9);
+    padding: 0.5rem 1rem;
+    border-bottom: #ccc 5px solid;
+}
 footer{
     padding: 2.1rem;
 }
 footer p{
     margin: 0;
 }
-
+@media(max-width: 887px){
+    .about-band{
+        grid-gap: 10px;
+        grid-template-areas:
+        'bandname'
+        'bandfull'
+        'bandmate1'
+        'bandmate2'
+        'bandmate3';
+        grid-template-columns: 1fr;
+        margin-top:70px;
+    }
+}
 /*Small Screens*/
 @media(max-width: 560px){
 .showcase::after{
