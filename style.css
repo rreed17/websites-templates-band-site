@@ -10,16 +10,20 @@ body{
 /*====================== NAVIGATION STYLE ====================================*/
 nav{
     position: absolute;
+    background: rgba(0,0,0,0.9);
+    width: 100%;
     z-index: 1;
 }
 ul{
     margin-left:300px 300px;
     padding:0;
     display:flex;
+    
   }
   ul li{
     list-style:none;
     padding:10px 40px;
+    
   }
   ul li a{
     text-decoration:none;
@@ -191,15 +195,18 @@ main{
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-    'bandfull bandname bandname'
+    'bandname bandfull bandtitle'
     'bandmate1 bandmate2 bandmate3'
     'bandmate1 bandmate2 bandmate3';
     grid-template-columns: 1fr 1fr 1fr;
     margin-top:70px;
 }
+.band-title{
+    grid-area: bandtitle;
+}
+
 .band-full{
-    grid-area: bandfull;
-    
+    grid-area: bandfull;    
     margin: auto;
     border-radius: 50%;
     border: #333 4px solid;
@@ -227,15 +234,37 @@ img.band-full{
     padding: 0.5rem 1rem;
     border-bottom: #ccc 5px solid;
 }
-
+/*=============================Music Styles==========================================*/
 .music-band{
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
     margin-top:70px;
 }
+/*=============================Gallery Styles==========================================*/
+.gallery-band{
+    margin-top: 70px;
+    display: -ms-flexbox;
+    -ms-flexbox-wrap: wrap;
+    -ms-flexbox-direction: column;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: flex;
+}
+.gallery-band div{
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+}
+.gallery-band div img{
+    width: 100%;
+    height: auto;
+}
+/*=============================Footer Style==================================================*/
 footer{
-    
     padding: 2.1rem;
 }
 footer p{
