@@ -9,7 +9,6 @@ body{
 }
 /*====================== NAVIGATION STYLE ====================================*/
 nav{
-    position: absolute;
     background: rgba(0,0,0,0.9);
     width: 100%;
     z-index: 1;
@@ -18,6 +17,7 @@ ul{
     margin-left:300px 300px;
     padding:0;
     display:flex;
+    transition: all 1000ms;
     
   }
   ul li{
@@ -136,9 +136,7 @@ ul{
     position: absolute;
     z-index: 1;    
     top: 20%;
-    left: 50%;
-    margin-top: 105px;
-    margin-left: -145px;
+    left: 40%;
     width: 300px;
     height: 350px;
     text-align: center;
@@ -160,6 +158,7 @@ ul{
 }
 .container{
     max-width: 960px;
+    min-height: calc(30vh - 60px);
     margin: auto;
     overflow: hidden;
     padding: 4rem 1rem;
@@ -187,7 +186,7 @@ ul{
     color: #f4f4f4;
 }
 main{
-    padding: 4rem;
+    padding: 0 4rem;
 }
 /*======================= About Styles ================================================*/
 
@@ -195,14 +194,14 @@ main{
     display: grid;
     grid-gap: 30px;
     grid-template-areas:
-    'bandname bandfull bandtitle'
+    'bandname bandfull bandfull'
     'bandmate1 bandmate2 bandmate3'
     'bandmate1 bandmate2 bandmate3';
     grid-template-columns: 1fr 1fr 1fr;
     margin-top:70px;
 }
 .band-title{
-    grid-area: bandtitle;
+    grid-area: bandname;
 }
 
 .band-full{
@@ -213,9 +212,6 @@ main{
 }
 img.band-full{
     width: 100%;
-}
-.band-short{
-    grid-area: bandname;
 }
 .band-short h1{
     display: inline-block;
@@ -242,27 +238,25 @@ img.band-full{
     margin-top:70px;
 }
 /*=============================Gallery Styles==========================================*/
-.gallery-band{
-    margin-top: 70px;
-    display: -ms-flexbox;
-    -ms-flexbox-wrap: wrap;
-    -ms-flexbox-direction: column;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    display: -webkit-box;
+.gallery-container{
     display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content:flex-start;
+    background: #333;
 }
-.gallery-band div{
-    -webkit-box-flex: auto;
-    -ms-flex: auto;
-    flex: auto;
-    width: 200px;
-    margin: .5vw;
+.gallery-container>div{
+    max-width: 400px;
+    margin: auto;
 }
-.gallery-band div img{
+.gallery-container img{
     width: 100%;
     height: auto;
+    margin: 5px;
+    padding: 5px;
+    border: 2px dotted red;
 }
+
 /*=============================Footer Style==================================================*/
 footer{
     padding: 2.1rem;
@@ -271,6 +265,44 @@ footer p{
     margin: 0;
 }
 @media(max-width: 887px){
+    ul{
+        flex-direction: column;
+
+    }
+    .showcase::after{
+        content:'';
+        height: 90vh;
+        width: 100%;
+        background-image: url(img/showcase2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        filter: none;
+        -webkit-filter:none;
+       
+    }
+    
+    .showcase:hover::after {
+        filter: none;
+        -webkit-filter:none;
+    }
+    .showcase:hover .content {
+        filter:none;
+        -webkit-filter:none;
+    }
+    .content{
+        position: relative;
+        z-index: 1;    
+        top: 20%;
+        left: 50%;
+        margin-top: 105px;
+        margin-left: -145px;
+        width: 300px;
+        height: 350px;
+        text-align: center;
+        transition: all 1000s;
+    }
     .about-band{
         grid-gap: 10px;
         grid-template-areas:
@@ -285,6 +317,9 @@ footer p{
 }
 /*Small Screens*/
 @media(max-width: 560px){
+ul li{
+    display: block;
+}
 .showcase::after{
     height: 50vh;
 }
