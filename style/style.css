@@ -113,7 +113,7 @@ ul{
     content:'';
     height: 100vh;
     width: 100%;
-    background-image: url(img/showcase2.png);
+    background-image: url(../img/showcase2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -188,6 +188,11 @@ ul{
 main{
     padding: 0 4rem;
 }
+/*======================= Home Styles ================================================*/
+a.faLink:link, visited, hover, active{
+    color: #fff;
+    text-decoration: none;
+}
 /*======================= About Styles ================================================*/
 
 .about-band{
@@ -212,6 +217,14 @@ main{
 }
 img.band-full{
     width: 100%;
+    margin-bottom:10%;
+}
+.headshot {
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 8px;
+    border-radius: 50%;
 }
 .band-short h1{
     display: inline-block;
@@ -516,6 +529,9 @@ audio:nth-child(2), audio:nth-child(4), audio:nth-child(6) {
 }
 
 /*=============================Footer Style==================================================*/
+.contact {
+    padding: .05%;
+}
 footer{
     padding: 2.1rem;
 }
@@ -531,7 +547,7 @@ footer p{
         content:'';
         height: 90vh;
         width: 100%;
-        background-image: url(img/showcase2.png);
+        background-image: url(../img/showcase2.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
